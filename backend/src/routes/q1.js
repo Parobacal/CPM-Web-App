@@ -11,9 +11,9 @@ const query = `SELECT P.nombre AS "PROFESIONAL", S1.TOTAL AS "TOTAL_INVENTOS"
                     GROUP BY Profesional_id) S1
                 WHERE S1.PROFESIONAL_ID = P.id
                 ORDER BY TOTAL DESC;`;
-    const q1 = await pool.query(query);
-    console.log(q1);
-    res.send(q1.rows);
+    const q = await pool.query(query);
+    console.log(q);
+    res.json(q);
 });
 
 module.exports = router;
