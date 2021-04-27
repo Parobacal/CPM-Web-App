@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/querys', require('./routes/q1'));
 app.use('/querys', require('./routes/q2'));
@@ -33,7 +33,7 @@ app.use('/querys', require('./routes/q18'));
 app.use('/querys', require('./routes/q20'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/frontend/build/index.html'));
+    res.sendFile(path.join(__dirname+'build/index.html'));
   });
 
 app.listen(app.get('port'), () => {
