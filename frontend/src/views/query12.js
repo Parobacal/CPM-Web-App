@@ -13,7 +13,7 @@ class Query12 extends Component{
     }
 
     getquery = async () => {
-        let data = await axios.get('http://localhost:8000/querys/q12')
+        let data = await axios.get('/querys/q12')
         .then(response => {
             return response;
         });
