@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Navigation from '../components/navbar';
 import axios from 'axios';
 
-class Query11 extends Component{
+class Query19 extends Component{
 
     constructor() {
         super();
@@ -13,7 +13,7 @@ class Query11 extends Component{
     }
 
     getquery = async () => {
-        let data = await axios.get('/querys/q11')
+        let data = await axios.get('http://localhost:8000/querys/q19')
         .then(response => {
             return response;
         });
@@ -31,15 +31,15 @@ class Query11 extends Component{
                 <Navigation />
                 <br />
                 <div className="text-center">
-                    <h1><small className="text-muted">Consulta #11</small></h1>
+                    <h1><small className="text-muted">Consulta #19</small></h1>
                 </div>
                 <br />
                 <div className="container">
                 <table className="table table-striped table-hover">
-                <thead class="thead-light">
+                <thead className="thead-light">
                     <tr>
                         <th scope="col">País</th>
-                        <th scope="col">Área</th>
+                        <th scope="col">Frontera con</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@ class Query11 extends Component{
                         return (
                             <tr>
                             <td>{trow.PAIS}</td>
-                            <td>{trow.AREA}</td>
+                            <td>{trow.FRONTERA_CON}</td>
                             </tr>
                         );
                     })}
@@ -60,4 +60,4 @@ class Query11 extends Component{
     }
 }
 
-export default Query11;
+export default Query19;

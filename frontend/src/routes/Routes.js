@@ -17,9 +17,13 @@ import Query12 from '../views/query12';
 import Query13 from '../views/query13';
 import Query14 from '../views/query14';
 import Query15 from '../views/query15';
+import Query16 from '../views/query16';
 import Query17 from '../views/query17';
 import Query18 from '../views/query18';
+import Query19 from '../views/query19';
 import Query20 from '../views/query20';
+import Country from '../views/country';
+import Question from '../views/question';
 
 function Routes() {
   return (
@@ -42,9 +46,13 @@ function Routes() {
         <Route exact path="/query13" component={Query13}/>
         <Route exact path="/query14" component={Query14}/>
         <Route exact path="/query15" component={Query15}/>
+        <Route exact path="/query16" component={Query16}/>
         <Route exact path="/query17" component={Query17}/>
         <Route exact path="/query18" component={Query18}/>
+        <Route exact path="/query19" component={Query19}/>
         <Route exact path="/query20" component={Query20}/>
+        <Route exact path="/country" component={Country}/>
+        <Route exact path="/question" component={Question}/>
       </Switch>
     </BrowserRouter>
   );

@@ -28,9 +28,14 @@ app.use('/querys', require('./routes/q12'));
 app.use('/querys', require('./routes/q13'));
 app.use('/querys', require('./routes/q14'));
 app.use('/querys', require('./routes/q15'));
+app.use('/querys', require('./routes/q16'));
 app.use('/querys', require('./routes/q17'));
 app.use('/querys', require('./routes/q18'));
+app.use('/querys', require('./routes/q19'));
 app.use('/querys', require('./routes/q20'));
+
+app.use('/country', require('./routes/country'));
+app.use('/question', require('./routes/question'));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/build/index.html'));

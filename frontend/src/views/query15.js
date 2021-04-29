@@ -29,9 +29,12 @@ class Query15 extends Component{
         return (
             <div>
                 <Navigation />
+                <br />
                 <div className="text-center">
                     <h1><small className="text-muted">Consulta #15</small></h1>
                 </div>
+                <br />
+                <div className="container">
                 <table className="table table-striped table-hover">
                 <thead class="thead-light">
                     <tr>
@@ -51,6 +54,7 @@ class Query15 extends Component{
                     })}
                 </tbody>
                 </table>
+                </div>
             </div>
         );
     }

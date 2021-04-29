@@ -48,14 +48,14 @@ class Login extends Component{
                                         <div className="line"></div>
                                     </div>
                                     <div className="row px-3"> <label className="mb-1">
-                                            <h6 className="mb-0 text-sm">Dirección de nt electrónico</h6>
+                                            <h6 className="mb-0 text-sm">Dirección de correo electrónico</h6>
                                         </label> <input className="mb-4" type="text" name="email" placeholder="Ingrese un correo válido" onChange={this.handleChange}/> </div>
                                     <div className="row px-3"> <label className="mb-1">
                                             <h6 className="mb-0 text-sm">Contraseña</h6>
                                         </label> <input type="password" name="password" placeholder="Ingrese la contraseña" onChange={this.handleChange}/> </div>
                                     <div className="row px-3 mb-4">
                                     </div>
-                                    <div className="row mb-3 px-3"> <button type="submit" className="btn btn-blue text-center" onClick={() => this.loginSession()}>Ingresar</button> </div>
+                                    <div className="mb-3 px-2"> <button type="submit" className="btn btn-success col-md-5 text-center" onClick={() => this.loginSession()}>Ingresar</button> </div>
                                     <div className="row mb-4 px-3"> <small className="font-weight-bold">¿Aún no tienes una cuenta? <a className="text-danger ">Regístrate</a></small> </div>
                                 </div>
                             </div>
