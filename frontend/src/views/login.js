@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../css/login.css';
+import swal from 'sweetalert';
 
 class Login extends Component{
     state = {
@@ -9,11 +10,20 @@ class Login extends Component{
         }
     }
 
+    showalert = () => {
+        swal({
+            title: "Error",
+            text: "El correo o la contraseña ingresados son inválidos.",
+            icon: "error",
+            button: "Aceptar"
+        });
+    }
+
     loginSession = async e => {
         if (this.state.form.email === "admin" && this.state.form.password === "admin"){
             window.location.href="./home";
         } else {
-            alert('El usuario ingresado o la contraseña son incorrectos');
+            this.showalert();
         }
     }
 

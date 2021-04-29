@@ -27,8 +27,8 @@ class Home extends Component{
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                   
                                     <div class="section-title mb-0">
-                                        <h2>Patentízate. Este es el lugar indicado</h2>
-                                        <p>Visualiza todos los registros de patentes y encuestas a lo largo del tiempo. </p>
+                                        <h2>Bienvenido. Esta es la cuenta de administración</h2>
+                                        <p>Visualiza, agrega, edita o elimina todos los registros de patentes y encuestas a lo largo del tiempo. </p>
                                     </div>
                              
                                 </div>
@@ -36,7 +36,7 @@ class Home extends Component{
                         </div>
                         <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                        Creado para <a href="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" target="_blank">la humanidad</a>
+                        Desarrollado por <a href="https://github.com/Parobacal"> parobacal </a>
                         </div></div>
                         </div>
                         </div>

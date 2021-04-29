@@ -34,9 +34,13 @@ router.put('/update/:id', async (req, res) => {
         `UPDATE Pregunta SET pregunta = '${PREGUNTA}', Encuesta_id = (SELECT id FROM Encuesta WHERE nombre = '${ENCUESTA}')
          WHERE id = ${id};`;
     console.log(query);
-    await pool.query(query);
-    res.json({text: 'Question updated'});
-    console.log("Question updated");
+    try {
+        await pool.query(query);
+        res.json({text: 'Question updated'});
+        console.log("Question updated");
+    } catch (error) {
+        res.status(500).send({ msg: error.message });
+    }
 });
 
 router.delete('/delete/:id', async (req, res) => {

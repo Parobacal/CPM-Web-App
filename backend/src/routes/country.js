@@ -20,11 +20,16 @@ router.post('/new', async (req, res) => {
          SELECT '${PAIS}','${CAPITAL}', ${POBLACION}, ${AREA}, id
          FROM Region
          WHERE region = '${REGION}';`;
+    try {
         const q = await pool.query(query);
         console.log(query);
         console.log(q);
         res.json({text: 'Country created'});
         console.log("Country created");
+    }
+    catch (error) {
+        res.status(500).send({ msg: error.message });
+    }
 });
 
 router.put('/update/:id', async (req, res) => {
@@ -34,9 +39,13 @@ router.put('/update/:id', async (req, res) => {
         `UPDATE Pais SET pais = '${PAIS}', capital = '${CAPITAL}', poblacion = ${POBLACION}, area = ${AREA}, Region_id = (SELECT id FROM Region WHERE region = '${REGION}')
          WHERE id = ${id};`;
     console.log(query);
-    await pool.query(query);
-    res.json({text: 'Country updated'});
-    console.log("Country updated");
+    try {
+        await pool.query(query);
+        res.json({text: 'Country updated'});
+        console.log("Country updated");
+    } catch (error) {
+        res.status(500).send({ msg: error.message });
+    }
 });
 
 router.delete('/delete/:id', async (req, res) => {

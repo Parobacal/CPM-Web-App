@@ -4,10 +4,11 @@ import axios from 'axios';
 import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 import {faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import swal from 'sweetalert';
 
 
 
-const url = "http://localhost:8000/country/";
+const url = "/country/";
 
 class Country extends Component{
     state = {
@@ -23,6 +24,15 @@ class Country extends Component{
             REGION: '',
             modal: ''
         }
+    }
+
+    showalert = () => {
+        swal({
+            title: "Error",
+            text: "Uno o varios campos son incorrectos.",
+            icon: "error",
+            button: "Aceptar"
+        });
     }
 
     modalInsert = () => {
@@ -68,6 +78,7 @@ class Country extends Component{
           this.modalInsert();
           this.getcountries();
         }).catch(error=>{
+            this.showalert();
             console.log(error.message);
         })
       }
